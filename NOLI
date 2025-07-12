@@ -1,0 +1,75 @@
+game:GetService("StarterGui"):SetCore("SendNotification", { 
+	Title = "NOLI SAYS HI";
+	Text = "ENJOY!";
+	Icon = "rbxassetid://2800056629"})
+Duration = 8
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("NOLI'S GUI", "GrapeTheme")
+local Tab = Window:NewTab("Basic")
+local Section = Tab:NewSection("LocalPlayer")
+---
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.Name = "ScreenGui"
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ResetOnSpawn = false
+
+local Toggle = Instance.new("TextButton")
+Toggle.Name = "Toggle"
+Toggle.Parent = ScreenGui
+Toggle.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Toggle.Position = UDim2.new(0, 0, 0.454706937, 0)
+Toggle.Size = UDim2.new(0, 90, 0, 38)
+Toggle.Font = Enum.Font.SourceSans
+Toggle.Text = "Toggle Noli's gui"
+Toggle.TextColor3 = Color3.fromRGB(248, 248, 248)
+Toggle.TextSize = 28.000
+Toggle.Draggable = true
+Toggle.MouseButton1Click:connect(function()
+    Library:ToggleUI()
+end)
+
+local Corner = Instance.new("UICorner")
+Corner.Name = "Corner"
+Corner.Parent = Toggle
+---
+Section:NewToggle("Walkspeed", "SPEEEDZZZ", function(state)
+    if state then
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 50
+    else
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+    end
+end)
+Section:NewToggle("Jump power", "DO U ACTUALLY THINK U CAN DEFEAT ME?", function(state)
+    if state then
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 350
+    else
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 100
+    end
+end)
+Section:NewButton("Fly", "THIS IS SPARTAN", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/9FvdknXN"))();
+end)
+Section:NewButton("Inf yield", "Admin cmd are col :)", function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+end)
+Section:NewButton("Remote", "mobile support is important lmao", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/EHvjE2sT"))()
+end)
+Section:NewButton("Keyboard", "Like i said xd", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Xxtan31/Ata/main/deltakeyboardcrack.txt"))();
+end)
+Section:NewButton("Tp tools", "Should be helpful somehow", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/CnrzahUZ"))();
+end)
+Section:NewButton("Noclip tools", "most basic thing", function()
+    loadstring(game:HttpGet("https://pastefy.app/HoSmO4NX/raw"))()
+end)
+Section:NewButton("Godmode", "I AM GOD OF WAR", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Rawbr10/Roblox-Scripts/refs/heads/main/God%20Mode%20Script%20Universal"))()
+end)
+---
+local Tab = Window:NewTab("My friend's gui :D")
+local Section = Tab:NewSection("He's ugly omg")
+Section:NewButton("Cool troublemaker gui", "loserz", function()
+    loadstring(game:HttpGet("https://github.com/007n70/Cool-troublemaker-gui/blob/main/SUPA%20COOLhttps://raw.githubusercontent.com/007n70/Cool-troublemaker-gui/refs/heads/main/SUPA%20COOL"))();
+end)
