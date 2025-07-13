@@ -71,5 +71,5 @@ end)
 local Tab = Window:NewTab("My friend's gui :D")
 local Section = Tab:NewSection("He's ugly omg")
 Section:NewButton("Cool troublemaker gui", "loserz", function()
-    loadstring(game:HttpGet("https://github.com/007n70/Cool-troublemaker-gui/blob/main/SUPA%20COOLhttps://raw.githubusercontent.com/007n70/Cool-troublemaker-gui/refs/heads/main/SUPA%20COOL"))();
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/007n70/Cool-troublemaker-gui/refs/heads/main/SUPA%20COOL"))();
 end)
