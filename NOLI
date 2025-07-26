@@ -75,6 +75,24 @@ end)
 Section:NewButton("Helikopter", "You..", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/GWxPqtBa", true))()
 end)
+local Tab = Window:NewTab("Forsaken")
+local Section = Tab:NewSection(":3")
+Section:NewButton("Esp", "made by noli", function()
+    void OnDrawGizmos() {
+    foreach (var survivor in survivors) {
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(survivor.position, 1f);
+    }
+    foreach (var killer in killers) {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(killer.position, 1f);
+    }
+    foreach (var item in items) {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireCube(item.position, Vector3.one * 0.5f);
+    }
+}
+end)
 ---
 local Tab = Window:NewTab("My friend's gui :D")
 local Section = Tab:NewSection("He's ugly omg")
